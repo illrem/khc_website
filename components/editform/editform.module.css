@@ -1,0 +1,104 @@
+.container {
+  width: 60%;
+}
+.contactForm {
+  font-size: 100%;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  color: black;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="number"],
+.contactForm input[type="location"],
+.contactForm input[type="date"],
+.contactForm input[type="time"],
+.contactForm select {
+  background-color: #ffffff;
+  color: black;
+  padding-left: 4px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  font-size: 100%;
+  font-weight: lighter;
+  margin-top: 1%;
+  width: 100%;
+  height: 40px;
+}
+.datSection1 {
+  margin-top: 2%;
+}
+.subtitle {
+  text-align: left;
+  font-size: 180%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+.formSection {
+  font-size: 100%;
+  margin-bottom: 3%;
+}
+.requestButton {
+  background-color: #f25e05;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 120%;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, 0.16),
+    0px 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 500;
+}
+.requestButton:hover {
+  background-color: #484d58;
+}
+.deleteButton {
+  background-color: #ffffff;
+  color: #484d58;
+  border-style: solid;
+  border-color: #484d58;
+}
+.deleteButton:hover {
+  background-color: #484d58;
+  color: #ffffff;
+}
+@media (max-width: 860px) {
+  .container {
+    width: 100%;
+    margin: 2%;
+  }
+  .subtitle {
+    font-size: 1.7rem;
+  }
+  .requestButton {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  .formSection {
+    width: 100%;
+  }
+  .contactForm input[type="text"],
+  .contactForm input[type="team"],
+  .contactForm input[type="number"],
+  .contactForm input[type="location"],
+  .contactForm select {
+    min-width: 100%;
+  }
+  .contactForm input[type="date"],
+  .contactForm input[type="time"] {
+    min-width: 94%;
+  }
+}

@@ -1,0 +1,109 @@
+.header {
+  background-color: #cdcfd0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.093); /* Added shadow */
+}
+
+.navitem {
+  /*The list of items in the navigation bar*/
+  list-style: none;
+}
+
+.navlink {
+  /*The individual links in the navigation bar*/
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: normal;
+  text-decoration: none;
+  color: #161617;
+  transition: 0.7s ease;
+}
+
+.navlink:hover {
+  color: #ffffff;
+}
+
+.navbar {
+  /*Container for logo and navigation links*/
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px 0 12px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navmenu {
+  /*Constainer for the list of navigation links*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbranding {
+  /*The logo*/
+  height: 50px;
+  width: 80px;
+}
+
+.hamburger {
+  /*The hamburger(menu) icon*/
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  /*Each line of the hamburger icon*/
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #161617;
+}
+
+@media (max-width: 768px) {
+  /*The hamburger icon is visible on screens smaller than 768px*/
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    /*When the hamburger is clicked, it changes from hamburger to cross*/
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* The hamburger styles when it is closed and when it's open(active)*/
+  .navmenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #cdcfd0;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+  }
+
+  .navitem {
+    margin: 8px 0;
+  }
+
+  .navmenu.active {
+    left: 0;
+  }
+}

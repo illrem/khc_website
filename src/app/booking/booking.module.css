@@ -1,0 +1,27 @@
+.container {
+  max-width: 1024px;
+
+  margin: 120px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.schedulePage {
+  height: 100vh;
+}
+
+.largeLogo {
+  max-width: 40%;
+  margin-left: 0;
+  margin-right: 10%;
+}
+
+.mainBooking {
+  width: 200px;
+}
+
+@media (max-width: 860px) {
+  .largeLogo {
+    display: none;
+  }
+}

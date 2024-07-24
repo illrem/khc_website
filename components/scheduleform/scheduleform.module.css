@@ -1,0 +1,102 @@
+.container {
+  width: 60%;
+}
+.scheduleForm {
+  font-size: 120%;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  color: black;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.scheduleForm input[type="text"],
+.scheduleForm input[type="date"],
+.scheduleForm input[type="time"],
+.scheduleForm input[type="team"],
+.scheduleForm select {
+  background-color: #ffffff;
+  color: black;
+  padding-left: 4px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  font-size: 100%;
+  margin-top: 1%;
+  width: 100%;
+  height: 40px;
+}
+.subtitle {
+  text-align: left;
+  font-size: 180%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+.formSection {
+  font-size: 100%;
+  margin-bottom: 3%;
+}
+.addButton {
+  background-color: #f25e05;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 120%;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, 0.16),
+    0px 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+}
+
+.addButton:hover {
+  background-color: #484d58;
+}
+
+@media (max-width: 860px) {
+  .subtitle {
+    font-size: 1.7rem;
+  }
+  .addButton {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  .container {
+    width: 100%;
+    margin: 2%;
+  }
+  .scheduleForm {
+    width: 100%;
+  }
+  .scheduleForm input[type="text"],
+  .scheduleForm input[type="team"],
+  .scheduleForm select {
+    min-width: 100%;
+  }
+  .scheduleForm input[type="date"],
+  .scheduleForm input[type="time"] {
+    min-width: 94%;
+  }
+}
+/* 
+@media (min-width: 1441px) {
+  .scheduleForm input[type="text"],
+  .scheduleForm input[type="date"],
+  .scheduleForm input[type="time"],
+  .scheduleForm input[type="team"],
+  .scheduleForm select {
+    width: 100%;
+  }
+}
+*/

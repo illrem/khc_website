@@ -1,0 +1,124 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/contactform/contactform.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+.contactform_formContainer__XkxWD {
+  display: flex;
+  flex-direction: column;
+  font-size: 120%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+  width: 40%;
+}
+
+.contactform_error__ntLW4 {
+  color: red;
+}
+
+.contactform_formContainer__XkxWD input[type="text"],
+.contactform_formContainer__XkxWD input[type="email"] {
+  background-color: #ffffff; /* Replace #yourColor with the color you want */
+  color: #484d58;
+  padding: 2%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px; /* Add this line */
+  border-color: lightgrey; /* Add this line */
+  border-style: solid;
+  border-width: 1px;
+}
+
+.contactform_subtitle__AGnnX {
+  font-size: 160%;
+}
+
+.contactform_contactBox__ozgWp {
+  background-color: #ffffff; /* Replace #yourColor with the color you want */
+  color: #484d58;
+  padding: 2%;
+  width: 100%;
+  height: 60%;
+  margin-top: 30px;
+  border-radius: 5px; /* Add this line */
+  border-color: lightgrey; /* Add this line */
+}
+
+.contactform_contact___qUtq {
+  padding-bottom: 5%;
+  text-align: center;
+  font-size: 180%;
+}
+
+.contactform_contactButton__roAFm {
+  background-color: #f25e05;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  box-shadow:
+    0px 3px 6px rgba(0, 0, 0, 0.16),
+    0px 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 500;
+}
+
+.contactform_contactButton__roAFm:hover {
+  background-color: #484d58;
+}
+
+@media (max-width: 860px) {
+  .contactform_formContainer__XkxWD {
+    width: 90%;
+  }
+
+  .contactform_subtitle__AGnnX {
+    font-size: 170%;
+  }
+
+  .contactform_contactButton__roAFm {
+    font-size: 100%;
+  }
+}
+
+.contactform_visuallyHidden__i4KM5 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/contact/contact.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.contact_container__cCpH8 {
+  max-width: 1024px;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact_largeLogo__27P_k {
+  max-width: 40%;
+}
+.contact_contactPage__1rDu5 {
+  height: 100vh;
+}
+
+@media (max-width: 860px) {
+  .contact_largeLogo__27P_k {
+    display: none;
+  }
+}
+
