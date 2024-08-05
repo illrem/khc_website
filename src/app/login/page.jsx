@@ -1,7 +1,6 @@
 // import React from "react";
 "use client";
 import styles from "./login.module.css";
-window.$ = window.jQuery = require("jquery");
 
 import { login, signup } from "./actions";
 import { useSearchParams } from "next/navigation";
@@ -11,11 +10,11 @@ export function getError() {
   const message = searchParams.get("message");
   return message === null
     ? null
-    : alert("Sorry, something went wrong " + message);
+    : "Sorry, something went wrong: " + message;
 }
 
 export default function LoginPage() {
-  getError();
+  const errorText= getError();
   return (
     <>
       <div className={styles.loginPage}>
@@ -25,6 +24,7 @@ export default function LoginPage() {
             <input id="email" name="email" type="email" required />
             <label htmlFor="password">Password:</label>
             <input id="password" name="password" type="password" required />
+            <label id="error">{errorText}</label>
             <button formAction={login} className={styles.loginButton}>
               Log in
             </button>
