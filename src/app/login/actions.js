@@ -25,7 +25,7 @@ export async function login(formData) {
 
   //revalidatePath("/", "layout");
   console.log(data);
-  redirect("/home");
+  redirect("/");
 }
 
 export async function signup(formData) {
@@ -44,7 +44,9 @@ export async function signup(formData) {
     // redirect("/error");
     redirect(`/login?message=${error}`);//throw error onto page
   }
-  console.log("here");
+
+  console.log(returnedData);
   //revalidatePath("/", "layout");
-  redirect("/");
+  let msg = "Signup successful please check your email, the email will come from noreply@mail.app.supabase.io";
+  redirect(`/login/success?message=${msg}`);
 }

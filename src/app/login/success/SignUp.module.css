@@ -1,0 +1,26 @@
+.signUpPage {
+  height: 75vh;
+}
+
+.container {
+  max-width: 60%;
+  height: 120vh;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.signUpPage {
+  height: 100vh;
+}
+
+.largeLogo {
+  max-width: 30%;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 860px) {
+  .container {
+    width: 90%;
+  }
+}

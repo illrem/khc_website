@@ -31,6 +31,7 @@ export default function LoginPage() {
             <button formAction={signup} className={styles.loginButton}>
               Sign up
             </button>
+            <a href="login/passwordReset" className={styles.resetPasswordButton}>              Reset Password            </a>
           </form>
         </div>
       </div>

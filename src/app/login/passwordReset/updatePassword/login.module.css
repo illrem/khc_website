@@ -49,18 +49,6 @@
   margin-top: 20px;
 }
 
-.resetPasswordButton {
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  font-size: 15px;
-  width: 120px;
-  font-weight: 500;
-  text-align: center; /* Center the text */
-  text-decoration: none;
-  margin-top: 1rem;
-}
-
 .linkDecoration {
   text-decoration: none;
   color: inherit;
