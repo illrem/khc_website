@@ -32,8 +32,6 @@ export default async function Header() {
 
     const supabase = createClient();
     await supabase.auth.signOut();
-    console.log("signout sent");
-    return redirect("/");
   };
 
   const isSupabaseConnected = canInitSupabaseClient();

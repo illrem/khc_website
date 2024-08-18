@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "../../src/utils/supabase/superbase.js";
 import styles from "./bookingform.module.css";
+import Cookies from 'js-cookie';
 
 function Booking() {
   const searchParams = useSearchParams();
@@ -22,7 +23,23 @@ function Booking() {
       setEventUUID(uuid);
     }
   }, [searchParams]);
+  
+  try{
+  let data = Cookies.get();
 
+  var prop;
+  var userEmail;
+  var isUserAdmin;
+for (prop in data) {
+    if (data.hasOwnProperty(prop)) {
+        userEmail = JSON.parse(Cookies.get(prop)).user.email;
+        isUserAdmin = JSON.parse(Cookies.get(prop)).user.email == "authenticated";//here
+    }
+}
+
+
+  }
+  catch{}
   useEffect(() => {
     if (eventUUID) {
       const getGame = async () => {
@@ -80,7 +97,7 @@ function Booking() {
       setFullNameError("");
     }
 
-    if (!email) {
+    if (!userEmail) {
       setEmailError("Email Address is required");
       return;
     } else {
@@ -92,7 +109,7 @@ function Booking() {
     if (remainingPlaces <= 0) {
       return;
     } else {
-      const newAttendee = `${fullName} (${email})`;
+      const newAttendee = `${fullName} (${userEmail})`;
       const attendees = Array.isArray(event.attendees) ? event.attendees : [];
       const { data, error } = await supabase
         .from("games")
@@ -178,13 +195,24 @@ function Booking() {
                 </div>
                 <div className={styles.contactForm}>
                   <label htmlFor="email">Email Address:</label>
+                  {(userEmail == null) ? (
                   <input
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={userEmail}
+                   onChange={(e) => setEmail(e.target.value)}
                     required
                   />
+                  )
+                  :
+                  (
+                    <input
+                      type="email"
+                      id="email"
+                      value={userEmail}
+                      required
+                    />)
+                }
                   {emailError && <p className={styles.error}>{emailError}</p>}
                 </div>
                 <button type="submit" className={styles.requestButton}>
