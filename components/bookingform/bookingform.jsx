@@ -33,7 +33,7 @@ function Booking() {
 for (prop in data) {
     if (data.hasOwnProperty(prop)) {
         userEmail = JSON.parse(Cookies.get(prop)).user.email;
-        isUserAdmin = JSON.parse(Cookies.get(prop)).user.email == "authenticated";//here
+        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "authenticated";
     }
 }
 
@@ -145,13 +145,13 @@ for (prop in data) {
       {eventUUID ? (
         event ? (
           <div className={styles.formSection}>
+            { isUserAdmin && (
             <div className={styles.tomEdit}>
               <h1 className={styles.subtitle}>{event.title}</h1>
               <button className={styles.editButton} onClick={handleEditDelete}>
                 Edit
               </button>
-            </div>
-
+            </div>)}
             <p className={styles.list}>
               <b>Date:</b>
               <br></br> {event.date}
