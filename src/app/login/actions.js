@@ -24,7 +24,6 @@ export async function login(formData) {
   }
 
   //revalidatePath("/", "layout");
-  console.log(data);
   redirect("/");
 }
 
