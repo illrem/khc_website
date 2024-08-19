@@ -79,7 +79,7 @@ export default function Form() {
   var isUserAdmin;
 for (prop in data) {
     if (data.hasOwnProperty(prop)) {
-        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "authenticated";
+        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
     }
 }
 if (!isUserAdmin)

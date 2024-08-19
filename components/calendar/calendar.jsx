@@ -11,6 +11,7 @@ import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./module.scss";
 import styles from "./calendar.module.css";
+import Cookies from 'js-cookie';
 
 function CalendarComponent() {
   const [events, setEvents] = useState([]);
@@ -34,8 +35,25 @@ function CalendarComponent() {
     router.push(`/booking?eventUUID=${event.id}`);
   };
 
+  try{
+    let data = Cookies.get();
+  
+    var prop;
+    var isUserAdmin;
+  for (prop in data) {
+      if (data.hasOwnProperty(prop)) {
+          isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
+      }
+  }
+}
+  catch{}
+  
+
   return (
+
+    
     <div className={styles.calendar}>
+      {isUserAdmin && (<a href="/schedule">             Schedule event            </a> )}
       <FullCalendar
         plugins={[
           dayGridPlugin,

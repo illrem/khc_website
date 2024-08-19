@@ -33,7 +33,7 @@ function Booking() {
 for (prop in data) {
     if (data.hasOwnProperty(prop)) {
         userEmail = JSON.parse(Cookies.get(prop)).user.email;
-        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "authenticated";
+        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
     }
 }
 
