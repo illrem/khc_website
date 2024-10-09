@@ -27,7 +27,7 @@ export default function CarouselHorizontal() {
 
   return (
     <div className={styles.slide_direction}>
-      <img src={images} alt={altText} className={styles.images} />
+      <image src={images} alt={altText} className={styles.images} />
       <div className={styles.arrowContainer}>
         <LeftArrow onClick={handleClick1} className={styles.leftButton} />
         <RightArrow onClick={handleClick2} className={styles.rightButton} />

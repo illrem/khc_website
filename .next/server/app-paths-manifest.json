@@ -1,6 +1,19 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/booking/page": "app/booking/page.js",
+  "/contact/page": "app/contact/page.js",
   "/about/page": "app/about/page.js",
-  "/whatson/page": "app/whatson/page.js",
+  "/edit/page": "app/edit/page.js",
+  "/bookingconfirmation/page": "app/bookingconfirmation/page.js",
+  "/contactconfirmation/page": "app/contactconfirmation/page.js",
+  "/editconfirmation/page": "app/editconfirmation/page.js",
+  "/login/passwordReset/page": "app/login/passwordReset/page.js",
+  "/login/page": "app/login/page.js",
+  "/login/passwordReset/updatePassword/page": "app/login/passwordReset/updatePassword/page.js",
+  "/merch/page": "app/merch/page.js",
+  "/login/success/page": "app/login/success/page.js",
+  "/protected/page": "app/protected/page.js",
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/schedule/page": "app/schedule/page.js",
+  "/whatson/page": "app/whatson/page.js"
 }

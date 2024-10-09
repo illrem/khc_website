@@ -67,28 +67,31 @@ function reducer(state, action) {
   }
 }
 
+const CanDisplay = () => {
+  try{
+        let data = Cookies.get();
+      var prop;
+      var isUserAdmin;
+    for (prop in data) {
+        if (data.hasOwnProperty(prop)) {
+            isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
+        }
+    }
+    if (!isUserAdmin)
+    {
+      return "/"
+    }
+      }
+      catch{return "/"}
+      return;
+}
+
 export default function Form() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [message, setMessage] = useState("");
   const { formData, errors, loading } = state;
 
-
-  try{
-    let data = Cookies.get();
-  var prop;
-  var isUserAdmin;
-for (prop in data) {
-    if (data.hasOwnProperty(prop)) {
-        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
-    }
-}
-if (!isUserAdmin)
-{
-  useRouter().push("/");
-}
-  }
-  catch{useRouter().push("/");}
-
+  useRouter().push(CanDisplay());
 
 
   function handleInputChanges(e) {
