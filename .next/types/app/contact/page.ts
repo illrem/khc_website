@@ -1,4 +1,4 @@
-// File: C:\Users\Rem\Documents\GitHub\khc\src\app\contact\page.js
+// File: C:\Users\User\Documents\coding\khc_website\src\app\contact\page.js
 import * as entry from '../../../../src/app/contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

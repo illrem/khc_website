@@ -14,6 +14,7 @@ export default function passwordResetPage() {
           </form>
         </div>
       </div>
-    </>
-  );
+          
+    </>
+  );
 }

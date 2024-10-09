@@ -22,13 +22,13 @@ For developers, running the project locally begins with configuring the environm
 
 A different contributor reviews the pull request to ensure it meets the project's standards and guidelines. Once approved, the changes are merged and deployed, ensuring the website remains functional and up-to-date.<br>
 Due to the time constraints of the project, a total duration of four weeks, unit testing was not implemented. However, end-to-end testing was completed using Playwright. Playwright was chosen for its ability to provide comprehensive testing by simulating real user interactions across different browsers, ensuring that all features function correctly from the user's perspective. This approach was deemed more effective for ensuring overall functionality within the limited time frame.
+
 <h2 align="center">Links</h2>
 
 - The Deployed Website: https://kingsheathclangers.me/
 - GitHub Repository: https://github.com/lazycloud0/khc.git
 - Project Presentation Video: https://www.youtube.com/watch?v=_2DT-UdjQ9U
 - Presentation Slides: https://www.canva.com/design/DAGGbgboN5o/6AEuAy3tvzfhkTfeApH2Jg/edit?utm_content=DAGGbgboN5o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
 
 <h2 align="center">Tech Stack</h2>
 
@@ -51,7 +51,6 @@ Due to the time constraints of the project, a total duration of four weeks, unit
     <img align="center" width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original-wordmark.svg" />
 </p>
 
-
 <h2 align="center">Who We Are</h2>
 <p align="left">Syntax Squad is a School of Code team who came together in the final four weeks of their bootcamp to plan, build and deploy a solution to a real-world problem posed by their stakeholder, King's Heath Community Basketball Club. <br>
  <br> After learning that the current method of scheduling games/training was a low-tech groupchat polling system, Syntax Squad explored potential solutions by conducting research, and the idea for King's Heath Clangers' scheduling application was founded. It would be able to improve the booking process for players whilst simultaneously giving easy access to coaches/admin staff to schedule new games.
@@ -63,15 +62,11 @@ This fantastic team was made up by the following developers:
 [@KelseyBaker262](https://github.com/KelseyBaker262)  
 [@josetutis](https://github.com/josetutis)
 [@lazycloud0](https://github.com/lazycloud0)  
-[@julesgsmith](https://github.com/julesgsmith)  
+[@julesgsmith](https://github.com/julesgsmith)
 
 <h2 align="center">Project Overview</h2>
 
-
-
 https://github.com/user-attachments/assets/f8c5ef46-03a8-4811-a0d0-ae1654d75381
-
-
 
 ![image](https://github.com/lazycloud0/khc/assets/149110361/5d54dce9-69eb-4d8e-8fa9-483ef8533b19)
 ![image](https://github.com/lazycloud0/khc/assets/149110361/c8552d51-d826-40e6-8789-32e19cb63d80)
@@ -84,49 +79,50 @@ https://github.com/user-attachments/assets/f8c5ef46-03a8-4811-a0d0-ae1654d75381
 ![Screenshot 2024-07-15 122422](https://github.com/user-attachments/assets/db0de165-dbf9-41e8-8ef0-afd1d6a5e729)
 ![image](https://github.com/user-attachments/assets/e182a65c-24c6-42d1-9bbf-34e95f629fba)
 
-
-
-
 <h2 align="center">Running this Project</h2>
 To run this project locally, you will need to do the following: <br><br>
 
 Clone the project
 
 ```yaml
-  git clone https://github.com/lazycloud0/khc.git
+git clone https://github.com/lazycloud0/khc.git
 ```
 
 Go to the project directory
 
 ```yaml
-  cd khc
+cd khc
 ```
 
 Install dependencies
 
 ```yaml
-  npm install
+npm install
 ```
- or
-```yaml 
-  pnpm install
+
+or
+
+```yaml
+pnpm install
 ```
 
 Start the server
 
 ```yaml
-  npm run dev
+npm run dev
 ```
+
 or
+
 ```yaml
-  pnpm dev
+pnpm dev
 ```
 
 Your app template should now be running on [localhost:3000](http://localhost:3000/).
 
 Add the following environment variables to your .env.local file:
 
-``` yaml
+```yaml
 NEXT_PUBLIC_SUPABASE_URL=" "
 NEXT_PUBLIC_SUPABASE_ANON_KEY=" "
 

@@ -20,7 +20,6 @@ export default function EditForm() {
     spots_available: 1, // Initialize with a default value of 1
   });
 
-
   const [touched, setTouched] = useState({
     event_type: false,
     date: false,
