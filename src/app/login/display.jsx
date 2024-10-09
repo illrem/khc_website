@@ -6,13 +6,11 @@ import { useSearchParams } from "next/navigation";
 function GetError() {
   const searchParams = useSearchParams();
   const message = searchParams.get("message");
-  return message === null
-    ? null
-    : "Sorry, something went wrong: " + message;
+  return message === null ? null : "Sorry, something went wrong: " + message;
 }
 
 export default function ChildLoginPage() {
-  const errorText= GetError();
+  const errorText = GetError();
   return (
     <>
       <div className={styles.loginPage}>
@@ -29,10 +27,17 @@ export default function ChildLoginPage() {
             <button formAction={signup} className={styles.loginButton}>
               Sign up
             </button>
-            <a href="login/passwordReset" className={styles.resetPasswordButton}>              Reset Password            </a>
+            <a
+              href="login/passwordReset"
+              className={styles.resetPasswordButton}
+            >
+              {" "}
+              Reset Password{" "}
+            </a>
           </form>
         </div>
       </div>
-    </>
-  );
+          
+    </>
+  );
 }

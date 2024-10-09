@@ -2,8 +2,8 @@
 import React, { useState, useReducer } from "react";
 import styles from "./scheduleform.module.css";
 import { supabase } from "../../src/utils/supabase/superbase.js";
-import Cookies from 'js-cookie';
-import { useRouter } from 'next/navigation';
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 // Initial state for form data and errors
 const initialState = {
@@ -68,23 +68,23 @@ function reducer(state, action) {
 }
 
 const CanDisplay = () => {
-  try{
-        let data = Cookies.get();
-      var prop;
-      var isUserAdmin;
+  try {
+    let data = Cookies.get();
+    var prop;
+    var isUserAdmin;
     for (prop in data) {
-        if (data.hasOwnProperty(prop)) {
-            isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
-        }
-    }
-    if (!isUserAdmin)
-    {
-      return "/"
-    }
+      if (data.hasOwnProperty(prop)) {
+        isUserAdmin = JSON.parse(Cookies.get(prop)).user.role == "Admin";
       }
-      catch{return "/"}
-      return;
-}
+    }
+    if (!isUserAdmin) {
+      return "/";
+    }
+  } catch {
+    return "/";
+  }
+  return;
+};
 
 export default function Form() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -92,7 +92,6 @@ export default function Form() {
   const { formData, errors, loading } = state;
 
   useRouter().push(CanDisplay());
-
 
   function handleInputChanges(e) {
     let { name, value } = e.target;

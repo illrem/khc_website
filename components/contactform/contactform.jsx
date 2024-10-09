@@ -78,7 +78,9 @@ const ContactForm = () => {
   return (
     <form onSubmit={sendEmail} className={styles.formContainer}>
       <h2 className={styles.subtitle}>Contact Us</h2>
-      <label htmlFor="user_name" className={styles.visuallyHidden}>Name</label>
+      <label htmlFor="user_name" className={styles.visuallyHidden}>
+        Name
+      </label>
       <input
         className={styles.contactInput}
         type="text"
@@ -90,7 +92,9 @@ const ContactForm = () => {
         onChange={(e) => setUserName(e.target.value)}
       />
       {errors.userName && <p className={styles.error}>{errors.userName}</p>}
-      <label htmlFor="user_email" className={styles.visuallyHidden}>Email</label>
+      <label htmlFor="user_email" className={styles.visuallyHidden}>
+        Email
+      </label>
       <input
         className={styles.contactInput}
         type="email"
@@ -102,7 +106,9 @@ const ContactForm = () => {
         onChange={(e) => setUserEmail(e.target.value)}
       />
       {errors.userEmail && <p className={styles.error}>{errors.userEmail}</p>}
-      <label htmlFor="message" className={styles.visuallyHidden}>Message</label>
+      <label htmlFor="message" className={styles.visuallyHidden}>
+        Message
+      </label>
       <textarea
         className={styles.contactBox}
         id="message"
@@ -120,7 +126,11 @@ const ContactForm = () => {
         disabled={isSubmitting}
         aria-label="Send message"
       />
-      {stateMessage && <p role="alert" aria-live="polite">{stateMessage}</p>}
+      {stateMessage && (
+        <p role="alert" aria-live="polite">
+          {stateMessage}
+        </p>
+      )}
     </form>
   );
 };

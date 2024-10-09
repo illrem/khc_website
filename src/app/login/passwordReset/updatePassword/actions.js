@@ -11,14 +11,13 @@ export async function reset(formData) {
   // in practice, you should validate your inputs
   const new_Password = formData.get("password");
 
-  
   const { error, data } = await supabase.auth.updateUser({
-    password: new_Password
+    password: new_Password,
   });
 
   if (error) {
     console.log(email);
-    redirect(`/login/success?message=${error}`);//here return message
+    redirect(`/login/success?message=${error}`); //here return message
   }
 
   //revalidatePath("/", "layout");

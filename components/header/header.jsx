@@ -4,30 +4,30 @@ import React, { useState } from "react";
 import styles from "./header.module.css";
 import Smalllogo from "../logos/smallLogo.jsx";
 import Link from "next/link";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 
 //The header component
 export default function Header() {
   //State to manage the menu open and close
   //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  try{
+  try {
     let data = Cookies.get();
-  
+
     var prop;
     var userEmail;
-  for (prop in data) {
+    for (prop in data) {
       if (data.hasOwnProperty(prop)) {
-          userEmail = JSON.parse(Cookies.get(prop)).user.email;
+        userEmail = JSON.parse(Cookies.get(prop)).user.email;
       }
       console.log(userEmail);
-  }
-} catch{}
+    }
+  } catch {}
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleLinkClick = () => {
     setIsMenuOpen(false);
-  }
+  };
   return (
     //The ul contains the navigation links and the hamburger icon
     //the navmenu uses state to determine if it should be active(in view) or not
@@ -36,7 +36,6 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Smalllogo className={styles.navbranding} />
-
 
         <ul className={`${styles.navmenu} ${isMenuOpen ? styles.active : ""}`}>
           <li className={styles.navitem}>
@@ -91,28 +90,28 @@ export default function Header() {
             </Link>
           </li>
           {userEmail == null ? (
-          <li className={styles.navitem}>
-            <Link
-              href="/login"
-              passHref
-              className={styles.navlink}
-              onClick={handleLinkClick}
-            >
-              Login
-            </Link>
-          </li>
+            <li className={styles.navitem}>
+              <Link
+                href="/login"
+                passHref
+                className={styles.navlink}
+                onClick={handleLinkClick}
+              >
+                Login
+              </Link>
+            </li>
           ) : (
-          <li className={styles.navitem}>
-            <Link
-              href="/"
-              passHref
-              className={styles.navlink}
-              onClick={handleLinkClick}
-            >
-              Logout
-            </Link>
-          </li>
-        )}
+            <li className={styles.navitem}>
+              <Link
+                href="/"
+                passHref
+                className={styles.navlink}
+                onClick={handleLinkClick}
+              >
+                Logout
+              </Link>
+            </li>
+          )}
         </ul>
         <div
           className={`${styles.hamburger} ${isMenuOpen ? styles.active : ""}`}
@@ -122,7 +121,7 @@ export default function Header() {
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
         </div>
-             </nav>
+      </nav>
     </header>
   );
 }

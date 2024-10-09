@@ -12,7 +12,6 @@ export async function login(formData) {
   const email = formData.get("email");
   const password = formData.get("password");
 
-  
   const { error, data } = await supabase.auth.signInWithPassword({
     email,
     password,
@@ -20,7 +19,7 @@ export async function login(formData) {
 
   if (error) {
     console.log(email, password);
-    redirect(`/login?message=${error}`);//here return message
+    redirect(`/login?message=${error}`); //here return message
   }
 
   //revalidatePath("/", "layout");
@@ -41,11 +40,12 @@ export async function signup(formData) {
 
   if (error) {
     // redirect("/error");
-    redirect(`/login?message=${error}`);//throw error onto page
+    redirect(`/login?message=${error}`); //throw error onto page
   }
 
   console.log(returnedData);
   //revalidatePath("/", "layout");
-  let msg = "Signup successful please check your email, the email will come from noreply@mail.app.supabase.io";
+  let msg =
+    "Signup successful please check your email, the email will come from noreply@mail.app.supabase.io";
   redirect(`/login/success?message=${msg}`);
 }
